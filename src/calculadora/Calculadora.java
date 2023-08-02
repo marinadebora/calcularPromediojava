@@ -23,31 +23,24 @@ public class Calculadora {
 
         do {
             option = prints();
-            if(option >=0 || option<=4){
-                switch (option){
-                    case 1:
-                        double promedio = calcularPromedio(notasAlumnos);
-                        System.out.println("El promedio de los Alumnos es: "+ promedio);
-                        break;
-                    case 2:
-                        int notaMasAlta = caalcularNotaMasAlta(notasAlumnos);
-                        System.out.println("la calificacion mas alta es: "+ notaMasAlta);
-                        break;
-                    case 3:
-                        int notaMasBaja =calcularNotaMasBaja(notasAlumnos);
-                        System.out.println("la calificacion mas baja es: "+notaMasBaja);
-                        break;
-                    case 0:
-                        System.out.println("Gracias vuelva pronto");
 
-                        break;
-                    default:
-                        System.out.println("Escribe un número valido");
-
+            switch (option) {
+                case 1 -> {
+                    double promedio = calcularPromedio(notasAlumnos);
+                    System.out.println("El promedio de los Alumnos es: " + promedio);
                 }
-            }else{
-                System.out.println("Escribe el número de la opción: ");
+                case 2 -> {
+                    int notaMasAlta = caalcularNotaMasAlta(notasAlumnos);
+                    System.out.println("la calificacion mas alta es: " + notaMasAlta);
+                }
+                case 3 -> {
+                    int notaMasBaja = calcularNotaMasBaja(notasAlumnos);
+                    System.out.println("la calificacion mas baja es: " + notaMasBaja);
+                }
+                case 0 -> System.out.println("Gracias vuelva pronto");
+                default -> System.out.println("Escribe un número valido");
             }
+
 
         } while(option !=0);
         scanner.close();

@@ -6,8 +6,8 @@ public class Promedio {
         for(int num: notaAlumnos){
             numeroPromedio = numeroPromedio + num;
         }
-        double promedio = numeroPromedio / notaAlumnos.length;
 
-        return promedio;
+
+        return (double) numeroPromedio / notaAlumnos.length;
     }
 }
